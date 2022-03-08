@@ -36,39 +36,42 @@ const Edit = ({ handleUpdate }) => {
   };
 
   return (
-    <form className="add-form" onSubmit={onSubmit}>
+    <>
       <Link to='/'>Go Back</Link>
-      <div className="form-control">
-        <label>Task</label>
-        <input
-          type="text"
-          placeholder="Add Task"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </div>
+      <h3 style={{marginTop: "10px"}}>Edit task</h3>
+      <form className="add-form" onSubmit={onSubmit}>
+        <div className="form-control">
+          <label>Task</label>
+          <input
+            type="text"
+            placeholder="Add Task"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
 
-      <div className="form-control">
-        <label>Day and Time</label>
-        <input
-          type="text"
-          placeholder="Add day"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
-      </div>
+        <div className="form-control">
+          <label>Day and Time</label>
+          <input
+            type="text"
+            placeholder="Add day"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
 
-      <div className="form-control form-control-check">
-        <label>Set Reminder</label>
-        <input
-          type="checkbox"
-          onChange={(e) => setReminder(e.currentTarget.checked)}
-          checked={reminder}
-        />
-      </div>
+        <div className="form-control form-control-check">
+          <label>Set Reminder</label>
+          <input
+            type="checkbox"
+            onChange={(e) => setReminder(e.currentTarget.checked)}
+            checked={reminder}
+          />
+        </div>
 
-      <input type="submit" value="Edit Task" className="btn btn-block" />
-    </form>
+        <input type="submit" value="Edit Task" className="btn btn-block" />
+      </form>
+    </>
   );
 };
 
