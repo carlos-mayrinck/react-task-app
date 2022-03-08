@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Estudar React",
+      "date": "Segunda as 21h",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "title": "Estudar NextJS",
+      "date": "Sábado às 18:00",
+      "reminder": false
+    },
+    {
+      "title": "Estudar Typescript",
+      "date": "Sexta 15h",
+      "reminder": false,
+      "id": 3
+    }
+  ]
+}
