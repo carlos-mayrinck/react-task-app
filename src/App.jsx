@@ -25,7 +25,7 @@ function App() {
 
   // Delete task
   const onDelete = async (id) => {
-    const res = await fetch(`http://localhost:8000/tasks/${id}`, {
+    await fetch(`http://localhost:8000/tasks/${id}`, {
       method: "DELETE",
     });
 
@@ -39,7 +39,7 @@ function App() {
 
     const updatedTask = { ...task, reminder: !task.reminder };
 
-    const res = await fetch(`http://localhost:8000/tasks/${id}`, {
+    await fetch(`http://localhost:8000/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -76,7 +76,7 @@ function App() {
     });
     const data = await res.json();
     
-    setTasks(tasks.map( task => (task.id == updatedTask.id ? data : task) ));
+    setTasks(tasks.map( task => (task.id === data.id ? data : task) ));
   }
 
   return (
